@@ -21,3 +21,8 @@ done
 sudo sed -i "s/zookeeper.connect=localhost:2181/zookeeper.connect=$SERVERS/g" /usr/local/kafka/config/server.properties
 
 # start kafka
+sudo /usr/local/kafka/bin/kafka-server-start.sh /usr/local/kafka/config/server.properties &
+
+# test kafka
+/usr/local/kafka/bin/kafka-topics.sh --describe --zookeeper localhost:2181 
+
