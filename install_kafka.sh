@@ -14,4 +14,4 @@ fi
 
 cd Kafka
 
-./setup_zookeeper_cluster.sh $PEMLOC
+./setup_kafka_cluster.sh $PEMLOC

@@ -30,3 +30,11 @@ done
 
 wait
 
+# Install Kafka
+id=-1
+for dns in "${SERVER_DNS[@]}"
+do
+    id=$((id+1))
+    ssh -o "StrictHostKeyChecking no" -i $PEMLOC ubuntu@$dns 'bash -s' < setup_kafka.sh $id ${SERVER_DNS[@]}&
+done
+
