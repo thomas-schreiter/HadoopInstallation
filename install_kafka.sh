@@ -2,7 +2,7 @@
 
 # check input arguments
 if [ "$#" -ne 1 ]; then
-    echo "Please specify pem-key locatione" && exit 1
+    echo "Please specify pem-key" && exit 1
 fi
 
 PEMLOC=$1
