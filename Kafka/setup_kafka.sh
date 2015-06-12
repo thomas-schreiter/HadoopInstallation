@@ -9,10 +9,10 @@ sudo mv /usr/local/kafka_* /usr/local/kafka
 sudo sed -i "s/broker.id=0/broker.id=$1/g" /usr/local/kafka/config/server.properties
 
 # replace advertised.host.name
-BEFORE='#advertised.host.name=<hostname routable by clients>'
-AFTER="advertised.host.name=$2"
-sudo sed -i "s/$BEFORE/$AFTER/g" /usr/local/kafka/config/server.properties
-echo $AFTER
+#BEFORE='#advertised.host.name=<hostname routable by clients>'
+#AFTER="advertised.host.name=$2"
+#sudo sed -i "s/$BEFORE/$AFTER/g" /usr/local/kafka/config/server.properties
+#echo $AFTER
  
 # replace zookeeper connect
 SERVERS=''
